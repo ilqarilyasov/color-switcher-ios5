@@ -15,13 +15,17 @@ class ViewController: UIViewController {
     let colorController = ColorController()
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
     
     
     // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateViews()
+        stepper.minimumValue = Double.infinity * -1
+        stepper.maximumValue = Double.infinity
     }
 
     func updateViews() {
